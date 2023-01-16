@@ -13,7 +13,8 @@ import rooster from "../images/rooster.png";
 import dog from "../images/dog.png";
 import pig from "../images/pig.png";
 
-const LoadCard = () => {
+const LoadCard = (props) => {
+  const { handleCardOnClick, currentScore } = props;
   const source = [
     {
       src: rat,
@@ -88,12 +89,17 @@ const LoadCard = () => {
     const newCards = [...cards];
     shuffleCard(newCards);
     setCards(newCards);
-  }, []);
+  }, [currentScore]);
 
   return (
     <div className="grid grid--1x6">
       {cards.map((card) => (
-        <DisplayCard key={card.alt} alt={card.alt} src={card.src} />
+        <DisplayCard
+          key={card.alt}
+          alt={card.alt}
+          src={card.src}
+          handleCardOnClick={handleCardOnClick}
+        />
       ))}
     </div>
   );
