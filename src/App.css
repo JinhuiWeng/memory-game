@@ -56,7 +56,7 @@ h3 {
   margin: 0px;
 }
 
-/* Scoreboard */
+/* Scoreboard and Timeboard*/
 .scoreboard {
   background: #727080;
   padding-top: 20px;
@@ -65,7 +65,15 @@ h3 {
   align-items: center;
 }
 
-.scoreboard .scoreboard__score {
+.timeboard {
+  background: #727080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard .scoreboard__score,
+.timeboard .timeboard__time {
   border-radius: 20px;
   width: 35%;
   color: #f7f71c;
@@ -74,7 +82,8 @@ h3 {
   text-align: center;
 }
 
-.scoreboard .scoreboard__bestscore {
+.scoreboard .scoreboard__bestscore,
+.timeboard .timeboard__besttime {
   border-radius: 20px;
   width: 35%;
   color: #c11515;
@@ -84,11 +93,13 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-  .scoreboard .scoreboard__score {
+  .scoreboard .scoreboard__score,
+  .timeboard .timeboard__time {
     padding-right: 50px;
   }
 
-  .scoreboard .scoreboard__bestscore {
+  .scoreboard .scoreboard__bestscore,
+  .timeboard .timeboard__besttime {
     padding-right: 50px;
   }
 }
