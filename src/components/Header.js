@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header">
       <h1 className="header__title">Zodiac Memory Game </h1>
       <p className="header__p">
-        Choosing an anmial from Zodiac, and get max 12 points if you don't click
+        Choose an anmial from Zodiac, and get max 12 points if you don't click
         on any more than once!
       </p>
     </div>

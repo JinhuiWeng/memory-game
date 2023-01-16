@@ -91,7 +91,7 @@ const LoadCard = () => {
   }, []);
 
   return (
-    <div className="cardgrid">
+    <div className="grid grid--1x6">
       {cards.map((card) => (
         <DisplayCard key={card.alt} alt={card.alt} src={card.src} />
       ))}

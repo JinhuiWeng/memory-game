@@ -1,14 +1,3 @@
-/* Color palette */
-:root {
-  --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
-  --color-heading: #1b0760;
-  --color-body: #918ca4;
-  --color-body-darker: #5c5577;
-  --color-border: #ccc;
-}
-
 *,
 *::after,
 *::before {
@@ -20,44 +9,87 @@
 html {
   /* default size is 16px, so 62.5 is 10 */
   font-size: 62.5%;
+  height: 100vh;
 }
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
-  line-height: 1.5;
-  color: var(--color-body);
-}
-
-h1,
-h3 {
-  color: var(--color-heading);
-  margin-bottom: 1rem;
-  line-height: 1.1;
+  font-size: 1rem;
+  background: rgba(1, 1, 1, 0);
+  min-height: 100%;
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 3rem;
 }
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-p {
-  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: 4rem;
   }
   h3 {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Header */
+.header {
+  background: #727080;
+}
+
+.header .header__title {
+  color: #020203;
+  text-align: center;
+}
+
+.header .header__p {
+  color: #18181b;
+  text-align: center;
+  margin: 0px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  background: #727080;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard .scoreboard__score {
+  border-radius: 20px;
+  width: 35%;
+  color: #f7f71c;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.scoreboard .scoreboard__bestscore {
+  border-radius: 20px;
+  width: 35%;
+  color: #c11515;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .scoreboard .scoreboard__score {
+    padding-right: 50px;
+  }
+
+  .scoreboard .scoreboard__bestscore {
+    padding-right: 50px;
   }
 }
 
@@ -65,7 +97,7 @@ p {
 .cardimg {
   margin: 15px 10px;
   display: block;
-  max-width: 200px;
+  max-width: 70px;
   border-radius: 20px;
   box-shadow: 0 0 10px 3px #1ca6cc;
   /* Show radius when size is bigger than card itself  */
@@ -75,23 +107,29 @@ p {
   transform: scale(1.1);
 }
 
+@media screen and (min-width: 1024px) {
+  .cardimg {
+    max-width: 109px;
+  }
+}
+
 /* Grids */
-.cardgrid {
+.grid {
+  background: #cfced2;
   display: grid;
   padding: 20px;
-  margin-top: 15px;
-  grid-template-columns: repeat(4, minmax(200px, 250px));
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
 }
 
-@media screen and (min-width: 768px) {
-  .grid--1x2 {
-    grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 1024px) {
+  .grid--1x6 {
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 60px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .grid--1x4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.footer {
+  background: #cfced2;
+  text-align: center;
 }

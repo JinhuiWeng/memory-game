@@ -7,6 +7,7 @@ const Scoreboard = () => {
       <h3 className="scoreboard__bestscore">Best Score: </h3>
     </div>
   );
-};
+};  
 
 export default Scoreboard;
+
