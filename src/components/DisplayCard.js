@@ -7,7 +7,7 @@ const DisplayCard = (props) => {
       className="cardimg"
       src={src}
       alt={alt}
-      onClick={handleCardOnClick.bind(this, alt)}
+      onClick={() => handleCardOnClick(alt)}
       role="button"
     />
   );

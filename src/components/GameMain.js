@@ -14,19 +14,23 @@ const GameMain = () => {
 
   const handleCardOnClick = (clickedCard) => {
     if (!clickedCardArray.includes(clickedCard)) {
-      setClickedCardsArray((clickedCard) => [...clickedCardArray, clickedCard]);
+      setClickedCardsArray(() => [...clickedCardArray, clickedCard]);
       handleCurrentScore();
-    }
+    } else handleReloadGame();
   };
 
-  //   const handleGame = () => {
-  //     if
-  //   }
+  const handleReloadGame = () => {
+    setClickedCardsArray([]);
+    setCurrentScore(0);
+  };
 
   return (
     <React.Fragment>
       <Scoreboard currentScore={currentScore} />
-      <LoadCard handleCardOnClick={handleCardOnClick} currentScore={currentScore} />
+      <LoadCard
+        handleCardOnClick={handleCardOnClick}
+        currentScore={currentScore}
+      />
     </React.Fragment>
   );
 };
