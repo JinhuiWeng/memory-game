@@ -4,12 +4,16 @@ import LoadCard from "./LoadCard";
 
 const GameMain = () => {
   const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [clickedCardArray, setClickedCardsArray] = useState([]);
-
-  //   const [bestScore, setBestScore] = useState[0];
 
   const handleCurrentScore = () => {
     setCurrentScore(currentScore + 1);
+  };
+
+  const handleBestScore = () => {
+    const soreComparison = currentScore >= bestScore ? currentScore : bestScore;
+    setBestScore(soreComparison);
   };
 
   const handleCardOnClick = (clickedCard) => {
@@ -21,12 +25,13 @@ const GameMain = () => {
 
   const handleReloadGame = () => {
     setClickedCardsArray([]);
+    handleBestScore();
     setCurrentScore(0);
   };
 
   return (
     <React.Fragment>
-      <Scoreboard currentScore={currentScore} />
+      <Scoreboard currentScore={currentScore} bestScore={bestScore} />
       <LoadCard
         handleCardOnClick={handleCardOnClick}
         currentScore={currentScore}
