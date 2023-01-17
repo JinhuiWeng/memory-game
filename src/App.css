@@ -140,6 +140,51 @@ h3 {
   }
 }
 
+/* Popup Box */
+.gamepopup {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.gamepopup__box {
+  border: 3px solid rgb(12, 10, 10);
+  background: rgb(158, 152, 152);
+  border-radius: 10px;
+  position: relative;
+  width: 30%;
+  margin: auto;
+  margin-top: 30vh;
+  padding: 35px;
+  overflow: auto;
+}
+
+.gamepopup__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gamepopup__buttondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(158, 152, 152);
+}
+.gamepopup__button {
+  border: 2px solid rgb(117, 55, 55);
+  background: rgb(180, 27, 27);;
+  border-radius: 10px;
+}
+
+.gamepopup__button:hover {
+  transform: scale(1.2);
+  border-radius: 5px;
+  background: rgb(230, 5, 5);
+}
+
 .footer {
   background: #cfced2;
   text-align: center;
