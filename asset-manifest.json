@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/zodiac-memory-game/static/css/main.1b5f38e2.css",
+    "main.js": "/zodiac-memory-game/static/js/main.713e1f6f.js",
+    "static/media/tiger.png": "/zodiac-memory-game/static/media/tiger.2975ba21a6bc65e97946.png",
+    "static/media/rabbit.png": "/zodiac-memory-game/static/media/rabbit.1024bc619b17113c90a1.png",
+    "static/media/dragon.png": "/zodiac-memory-game/static/media/dragon.8c54ed107f04c263ab18.png",
+    "static/media/snake.png": "/zodiac-memory-game/static/media/snake.0ef2a215bcc664055999.png",
+    "static/media/rooster.png": "/zodiac-memory-game/static/media/rooster.3c9ca2b1b7c6e92fd3e8.png",
+    "static/media/rat.png": "/zodiac-memory-game/static/media/rat.548c7977e79a9ce572ee.png",
+    "static/media/ox.png": "/zodiac-memory-game/static/media/ox.6d18041956c7a8a58d06.png",
+    "static/media/goat.png": "/zodiac-memory-game/static/media/goat.d12104e741aead69f86a.png",
+    "static/media/horse.png": "/zodiac-memory-game/static/media/horse.d38bcbc97041a9e243dc.png",
+    "static/media/pig.png": "/zodiac-memory-game/static/media/pig.47c8c72ef7025faf70a9.png",
+    "static/media/dog.png": "/zodiac-memory-game/static/media/dog.674306292f7f034e307f.png",
+    "static/media/monkey.png": "/zodiac-memory-game/static/media/monkey.a34cfd6665d483e4e15f.png",
+    "index.html": "/zodiac-memory-game/index.html",
+    "main.1b5f38e2.css.map": "/zodiac-memory-game/static/css/main.1b5f38e2.css.map",
+    "main.713e1f6f.js.map": "/zodiac-memory-game/static/js/main.713e1f6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b5f38e2.css",
+    "static/js/main.713e1f6f.js"
+  ]
+}
