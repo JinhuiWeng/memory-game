@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zodiac-memory-game/static/css/main.1b5f38e2.css",
+    "main.css": "/zodiac-memory-game/static/css/main.9349a52c.css",
     "main.js": "/zodiac-memory-game/static/js/main.713e1f6f.js",
     "static/media/tiger.png": "/zodiac-memory-game/static/media/tiger.2975ba21a6bc65e97946.png",
     "static/media/rabbit.png": "/zodiac-memory-game/static/media/rabbit.1024bc619b17113c90a1.png",
@@ -15,11 +15,11 @@
     "static/media/dog.png": "/zodiac-memory-game/static/media/dog.674306292f7f034e307f.png",
     "static/media/monkey.png": "/zodiac-memory-game/static/media/monkey.a34cfd6665d483e4e15f.png",
     "index.html": "/zodiac-memory-game/index.html",
-    "main.1b5f38e2.css.map": "/zodiac-memory-game/static/css/main.1b5f38e2.css.map",
+    "main.9349a52c.css.map": "/zodiac-memory-game/static/css/main.9349a52c.css.map",
     "main.713e1f6f.js.map": "/zodiac-memory-game/static/js/main.713e1f6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b5f38e2.css",
+    "static/css/main.9349a52c.css",
     "static/js/main.713e1f6f.js"
   ]
 }
