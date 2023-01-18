@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const GamePopup = (props) => {
-  const { currentScore, handleReloadGame } = props;
+  const { handleBestTime, handleReloadGame } = props;
+
+  useEffect(() => {
+    handleBestTime();
+  }, []);
 
   return (
     <div className="gamepopup">

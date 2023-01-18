@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Scoreboard from "./Scoreboard";
 import Timeboard from "./Timeboard";
 import LoadCard from "./LoadCard";
@@ -8,10 +8,11 @@ const GameMain = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [bestTime, setBestTime] = useState(0);
+  const [bestTime, setBestTime] = useState(null);
   const [clickedCardArray, setClickedCardsArray] = useState([]);
-  //   const [showPopup, setShowPopup] = useState(true);
+  const intervalRef = useRef(0);
 
+  //score
   const handleCurrentScore = () => {
     setCurrentScore((currentScore) => currentScore + 1);
   };
@@ -21,35 +22,34 @@ const GameMain = () => {
     setBestScore(soreComparison);
   };
 
+  //time
   useEffect(() => {
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setCurrentTime((currentTime) => currentTime + 1);
     }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(intervalRef.current);
+  }, [currentTime]);
 
+  const handleResetTime = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = 0;
+    setCurrentTime(0);
+  };
+
+  const handleBestTime = () => {
+    if (bestTime !== null) {
+      const timeComparison = currentTime < bestTime ? currentTime : bestTime;
+      setBestTime(timeComparison);
+    } else setBestTime(currentTime);
+  };
+
+  //game logic
   const handleReloadGame = () => {
     setClickedCardsArray([]);
     handleBestScore();
     setCurrentScore(0);
+    handleResetTime();
   };
-
-  // useEffect(() => {
-  //   if (clickedCardArray.length !== 2) {
-  //     setShowPopup(!showPopup);
-  //     handlePopup();
-  //   }
-  // }, [clickedCardArray.length]);
-
-  // disabled={showPopup}
-  //   const handlePopup = () => (
-  //     <Popup trigger={clickedCardArray.length === 2} position="right center">
-  //       <div>
-  //         <h3>Well done! You have scored max 12 points!!</h3>
-  //         <button onClick={() => handleReloadGame}> Start A New Game!</button>
-  //       </div>
-  //     </Popup>
-  //   );
 
   const handleCardOnClick = (clickedCard) => {
     if (!clickedCardArray.includes(clickedCard)) {
@@ -62,17 +62,17 @@ const GameMain = () => {
     <React.Fragment>
       <div>
         <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-        <Timeboard currentTime={currentTime} />
+        <Timeboard currentTime={currentTime} bestTime={bestTime} />
         <LoadCard
           handleCardOnClick={handleCardOnClick}
           currentScore={currentScore}
         />
       </div>
       <div>
-        {currentScore === 2 && (
+        {currentScore === 12 && (
           <GamePopup
-            currentScore={currentScore}
             handleReloadGame={handleReloadGame}
+            handleBestTime={handleBestTime}
           />
         )}
       </div>
