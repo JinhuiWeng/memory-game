@@ -92,7 +92,7 @@ const LoadCard = (props) => {
   }, [currentScore]);
 
   return (
-    <div className="grid grid--1x6">
+    <div className="grid grid--1x4">
       {cards.map((card) => (
         <DisplayCard
           key={card.alt}
