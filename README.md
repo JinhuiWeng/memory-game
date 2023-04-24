@@ -19,4 +19,5 @@ npm start
 - Conditional Rendering
 - Bootstrap 
 
-<img width="939" alt="Zodiac Memory Game" src="https://user-images.githubusercontent.com/121464684/219956628-728b05f3-d3d8-4804-83e7-a21adaf6e3a4.png">
+
+![Zodiac Memory Game](https://user-images.githubusercontent.com/121464684/234021857-b1913565-b0fd-4343-b00a-aed0277fdf46.jpeg)
